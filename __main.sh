@@ -3,6 +3,7 @@
 commit_github(){
   git init
   git add .
+  git config --global user.email brunogomes.comp@gmail.com
   git commit -m "Initial commit"
   git remote add origin bgomes06@github.com:bgomes06/docker_base.git
   git push -f origin master
