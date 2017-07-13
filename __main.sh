@@ -5,8 +5,10 @@ commit_github(){
   git add .
   git config --global user.email brunogomes.comp@gmail.com
   git commit -m "Initial commit"
-  git remote add origin bgomes06@github.com:bgomes06/docker_base.git
-  git push -f origin master
+  #git remote add origin bgomes06@github.com:bgomes06/docker_base.git
+  git remote rm origin
+  git remote add origin https://github.com/bgomes06/docker_base.git
+  git push -u origin master
 }
 
 create_repo(){
