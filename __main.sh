@@ -18,3 +18,11 @@ create_repo(){
 create_container(){
   docker build -t teste:1.0 .
 }
+
+clone_infoblox(){
+  git clone https://github.com/Infoblox-Development/Infoblox-API-Python.git
+}
+
+my_bashrc(){
+  cat config/.bashrc >> /root/.bashrc
+}
