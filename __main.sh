@@ -1,7 +1,7 @@
 #!/bin/bash
 
 commit_github(){
-  read -p "Insert your commit message:" message
+  read -p "Insert your commit message: " message
   git init
   git add .
   git config --global user.email brunogomes.comp@gmail.com
@@ -13,7 +13,8 @@ commit_github(){
 }
 
 create_repo(){
-  curl -u 'bgomes06' https://api.github.com/user/repos -d '{"name":"docker_base"}'
+  read -p "Insert the name of your new repo: " repo_name
+  curl -u 'bgomes06' https://api.github.com/user/repos -d '{"name":"$repo_name"}'
 }
 
 create_container(){
@@ -21,7 +22,7 @@ create_container(){
 }
 
 clone_infoblox(){
-  git clone https://github.com/Infoblox-Development/Infoblox-API-Python.git
+  git clone https://github.com/Infoblox-Development/Infoblox-API-Python.git /root
 }
 
 my_config(){
