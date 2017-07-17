@@ -26,8 +26,8 @@ clone_infoblox(){
 }
 
 my_config(){
-  egrep "my_config" /root/.bashrc
-  if [ $? == 1 ]; then
+  egrep "my_config" /root/.bashrc 2>/dev/null
+  if [ ! -f /root/.bashrc ] || [ $? != 1 ]; then
     cat config/.bashrc >> /root/.bashrc
     source /root/.bashrc
   fi
