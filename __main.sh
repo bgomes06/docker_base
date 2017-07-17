@@ -22,7 +22,8 @@ create_container(){
 }
 
 clone_infoblox(){
-  git clone https://github.com/Infoblox-Development/Infoblox-API-Python.git /root
+  mkdir /root/Infoblox-API-Python
+  git clone https://github.com/Infoblox-Development/Infoblox-API-Python.git /root/Infoblox-API-Python
 }
 
 my_config(){
